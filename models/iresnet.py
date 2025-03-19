@@ -141,7 +141,7 @@ class IResNet(nn.Module):
 
         x = self.bn2(x)
         x = self.dropout(x)
-        x = x.view(x.size(0), -1)
+        x = x.reshape(x.size(0), -1)
         x = self.fc(x)
         x = self.features(x)
 
